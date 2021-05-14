@@ -1,0 +1,548 @@
+
+
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* body {
+margin: 0;
+padding: 0;
+font-size: 100%;
+background-color: #FFFFFF; */
+/* } */
+
+
+.header-right {
+    float: right;
+}
+
+
+
+}
+
+#foto1 {
+    position: relative;
+
+}
+
+
+
+#tekst1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Brush Script MT;
+    font-size: 40px;
+    color: #999999;
+    font-weight: 10;
+}
+
+#rezervimi {
+    color: white;
+    font-size: 100px;
+}
+
+.logo-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+.separator {
+    width: 200%;
+   
+}
+
+input {
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.subscribe-form {
+    text-align: left;
+}
+.footer-subscribe {
+    display: inline;
+}
+input[type=submit] {
+    background-color: var(--our-cyan);
+}
+
+button {
+    color: white;
+    background-color: var(--our-cyan);
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+    width: fit-content;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+input[type=text] {
+    background-color: var(--our-dark-gray);
+}
+
+
+input:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10px;
+}
+#delicious {
+    text-align: center;
+    padding: inherit; 3em 1em 1em 1em;
+    /* font-family: Brush Script MT; */
+    font-size: 30px;
+}
+.booking {
+    background-color: skyblue;
+    padding: 70px;
+    border: 1px solid #4CAF50;
+}
+.booking_link{
+    color: black;
+    font-family: sans-serif;
+    border-style: solid;
+}
+.footer-div {
+    display: inline;
+    display: flex;
+    
+}
+.footer-subscribe{
+    padding-left: 200px;
+}
+.footer-links{
+    padding-left: 200px;
+
+}
+.footer-blog{
+    padding-left: 200px;
+
+}
+.ftco-heading-2 {
+    color: white;
+}
+.ftco-heading-2 p{
+    color: white;
+}
+
+.footer-div{
+    background-color: #33302f;
+}
+.reservation-form {
+    display: flex;
+    margin-left: 20px;
+}
+#p1 {
+    padding-top: 100px;
+    padding-left: 30px;
+}
+.nav-item {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .nav-item:hover {
+  color: skyblue;
+}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/w3images/pizza.jpg");
+  min-height: 90%;
+}
+.menu-wrap {
+    margin-bottom: 3em;
+    padding: 3em 1.5em .5em 1.5em;
+    border: 1.5px dashed #e6e6e6;
+    position: relative;
+    background: #fcfcfc;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+.menut {
+    display: flex;
+    padding: 30px;
+}
+.menus .menu-img {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+.hotel-img, .img, .blog-img, .user-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.end-footer {
+    background-color: var(--our-dark-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+.end-footer p {
+    color: var(--our-light-gray);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-footer {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content: center;
+    background-color: var(--our-gray);
+    color: whitesmoke;
+}
+.main-footer .sector {
+    color: whitesmoke;
+    padding-left: 10px;
+    line-height: 1;
+    margin: 0;
+    flex-basis: 24%;
+}
+.main-footer .sector h1 {
+    color: whitesmoke;
+    font-size: 22px;
+    font-weight: 100;
+}
+.main-footer .sector p {
+    color: var(--our-light-gray);
+}
+
+.main-footer .sector pre {
+    color: var(--our-light-gray);
+    line-height: 1.5;
+}
+
+.main-footer .sector input {
+    display: block;
+    margin-top: 10px;
+}
+
+.main-footer .sector input::placeholder {
+    color: var(--our-light-gray);
+    opacity: 0.5;
+}
+
+.main-footer .sector input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--our-light-gray);
+    opacity: 0.5;
+}
+
+a {
+    color: var(--our-cyan);
+}
+.heading-section .subheading {
+    font-weight: normal;
+    font-size: 40px;
+    display: block;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    color: var(--our-cyan);
+    position: relative;
+    line-height: 1;
+    font-family: "Dancing Script", cursive;
+    margin-bottom: -20px;
+    z-index: -1;
+    text-align: center !important;
+}
+.mb-4 {
+    text-align: center !important;
+    font-family: cursive;
+    color: black;
+}
+
+.text {
+    height: 150px;
+    width: 230px;
+}
+.active {
+    background-color: var(--our-darker-cyan);
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+}
+.slideshow-container {
+   max-width: 1000px;
+    height: 400px;
+}
+  
+
+.fixed-bg-3::after {
+    content: '';
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+   
+}
+* {box-sizing: border-box}
+/*body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #3BAFBE;
+}
+
+/* Caption text */
+/*.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+*/
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--our-cyan);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3BAFBE;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.img1 {
+     filter: brightness(40%);
+}
+ .subheading1{
+font-weight: normal;
+    font-size: 40px;
+    display: block;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+     color: var(--our-light-gray);
+    position: relative;
+    line-height: 1;
+    font-family: "Dancing Script", cursive;
+    margin-bottom: -20px;
+    z-index: -1;
+    text-align: center !important;
+}
+.subheading2 {
+    font-family:courier new;
+    color: var(--our-cyan);
+    text-align: center !important;
+
+}
+.menu-image-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mySlides {
+    display: none;
+}
+
+.slider-container {
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    top: -40px;
+    overflow: hidden;
+}
+
+.slider-container .mySlides {
+    position: relative;
+}
+
+.slider-container .mySlides img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+}
+
+.slider-container .mySlides::after {
+    content: '';
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.w3-left, .w3-right, .slider-badge {
+    cursor: pointer;
+}
+
+.w3-transparent, .w3-hover-none:hover {
+    background-color: transparent!important;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.w3-border {
+    border: 1px solid rgba(255, 255, 255, .5)!important;
+}
+
+.slider-badge, .w3-tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    transition: background-color 0.6s ease
+}
+
+.w3-container:after, .w3-container:before, .w3-panel:after, .w3-panel:before, .w3-row:after, .w3-row:before, .w3-row-padding:after, .w3-row-padding:before, .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.slider-display-bottommiddle {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.6s ease;
+    border-radius: 0 1px 1px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+  }

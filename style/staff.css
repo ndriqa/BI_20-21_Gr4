@@ -1,0 +1,108 @@
+:root {
+    --our-cyan: #3BAFBE;
+    --our-darker-cyan: #006b6b;
+    --our-dark-gray: #202020;
+    --our-light-gray: #999999;
+    --our-gray: #303030;
+}
+
+.chefs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.chef{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px var(--our-darker-cyan);
+    background-color: var(--our-light-gray);
+    border: 1px dashed var(--our-dark-gray);
+}
+.image{
+    flex: 1;
+}
+.image img{
+    max-width: 200px;
+    max-height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--our-darker-cyan);
+}
+.info{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--our-dark-gray);
+    line-height: 0.5;
+    text-shadow: 0px 0px 5px white;
+}
+.fname{
+    font-size: 2rem;
+}
+.lname{
+    font-size: 3rem;
+}
+.favorite-quote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0px 0px 3px white;
+}
+.quote{
+    font-weight: bold;
+    font-style: italic;
+    word-wrap: break-word;
+    width: 60%;
+
+}
+.author{
+    align-self: flex-end;
+    font-size: 0.75rem;
+    width: 60%;
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+    
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+.end {
+    display: flex;
+} 
