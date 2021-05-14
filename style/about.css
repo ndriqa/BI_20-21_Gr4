@@ -1,0 +1,312 @@
+:root {
+    --our-cyan: #3bafbe;
+    --our-darker-cyan: #006b6b;
+    --our-dark-gray: #202020;
+    --our-light-gray: #999999;
+    --our-gray: #303030;
+  }
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.main{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about{
+    background-color:var(--our-darker-cyan);
+    z-index: 0;
+}
+.about-section{
+    margin-top: 50px;
+    position: relative;  
+    background-size: 55%;
+    overflow: hidden;
+    padding: 100px 0;
+    z-index: 2;
+}
+.about-background{
+    position: absolute;
+    background: url(../Images/about/restaurant/hamburger.jfif) no-repeat left;
+    background-size: 70% 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.inner-container{
+    position: relative;
+    width: 75%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+    z-index: 2;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--our-cyan);
+}
+
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.skills span{
+    flex: 2;
+}
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+    .about-background{
+        background-size: 100% 100%;
+    }
+
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .about-background{
+        background-size: 100% 100%;
+    }
+
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .about-background{
+        background-size: 100% 100%;
+    }
+
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    margin: 10px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
+  }
+ .card2{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 10px;
+}
+ .card2 img{
+     width: 100%;
+     border-radius: 10px;
+ }
+ .card img{
+    width: 100%;
+    max-height: 300px;
+    padding:10px;
+    border-radius: 20px;
+}
+
+  .about-section {
+    padding: 50px;
+  }
+  
+  
+  .row{
+      display: flex;
+      width: 100%;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: var(--our-cyan);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  #h3 {
+	text-align: center;
+	font-size: 1.8em;
+    color: rgb(82, 56, 46);
+	text-transform: capitalize;
+	font-style: italic;
+}
+#happy_clients{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.ins {
+    display: flex;
+	flex-direction: row;
+    text-align: center;
+    content: "";
+    clear: both;
+}
+
+div.team span {
+  	text-transform: capitalize;
+  	color:   rgb(236, 184, 115);
+  	font-size: 14px;
+  	font-weight: 800;
+}
+.ig1 img
+	{display:inline-block;
+	vertical-align:center;}
+
+.ig1 img:hover
+    {
+		transform: rotateY(360deg);
+		transition: 1s;}
+.ig2 img:hover 
+	{	transform: translate(100px,50px);	
+		transition: 1s;}
+.ig3 img:hover 
+	{	transform: skewY(20deg);
+	}
+.ig4 img:hover 
+	{	transform: scale(1.6);
+	}
+.ig2 img
+	{display:inline-block;
+	vertical-align:center;}
+	
+.ig3 img{
+	display:inline-block;
+	vertical-align:center;
+}
+.ig4 img{
+	display:inline-block;
+	vertical-align:center;
+}
+.team{
+    padding: 10px;
+}
+.team audio{
+    outline: none;
+}
+.team h4{
+    padding: 5px;
+	text-transform:uppercase;
+	color: var(--our-cyan);
+	font-size:22px;
+	font-weight:700;
+    text-align: center;
+}
+
+
+.ig1 p
+	{width:250px;}
+	
+.ig2 p
+	{width:250px;}
+	
+.ig3 p
+	{width:250px;}
+
+.ig4 p
+    {width:250px;}
+    
+.restaurant{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.restaurant video{
+    margin-left: 220px;
+    border-radius: 20px !important;
+}
+
+.skills button {
+    background-color:var(--our-darker-cyan) !important;
+    border: none;
+    border-radius: 13px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    font: 400 13.3333px Arial;
+    word-wrap: none;
+    flex: 1;
+}
+.skills button:hover {
+    background-color: #555 !important;
+  }
+
+.skills button a {
+    padding: 10% 10%;
+    color: #0D153C;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    width: 100%;
+}
