@@ -44,21 +44,21 @@
 
       <nav class="header-nav-bar ">
         <ul id="menu">
-          <li class="nav-item"><a class="nav-link nm-bg" href="./index.html" class="nav-link">HOME</a> </li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./about.html">ABOUT US </a></li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./meny.html">MENU </a></li>
-          <li class="nav-item"><a class="nav-link nav-active" href="./order.html">ORDER NOW </a></li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./reservations.html">RESERVATION </a>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./index.php" class="nav-link">HOME</a> </li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./about.php">ABOUT US </a></li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./meny.php">MENU </a></li>
+          <li class="nav-item"><a class="nav-link nav-active" href="./order.php">ORDER NOW </a></li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./reservations.php">RESERVATION </a>
             <li class="nav-item">
               <div class="dropdown">
                 <a class="nm-bg">OUR STAFF</a>
                 <div class="dropdown-content">
-                  <a class="nav-link nm-bg" href="./board.html">BOARD</a> <hr>
-                  <a class="nav-link nm-bg" href="./chefs.html">CHEFS</a>
+                  <a class="nav-link nm-bg" href="./board.php">BOARD</a> <hr>
+                  <a class="nav-link nm-bg" href="./chefs.php">CHEFS</a>
                 </div>
               </div>
             </li>
-            <li class="nav-item nm-bg"><a class="nav-link" href="./contact.html">CONTACT </a>
+            <li class="nav-item nm-bg"><a class="nav-link" href="./contact.php">CONTACT </a>
         </ul>
       </nav>
     </div>
