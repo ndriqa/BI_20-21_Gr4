@@ -151,9 +151,7 @@
 
 
           <form action="reservationForm.php" method="POST">
-
-            First name:
-
+            <br>
             <div id='name' style="padding-bottom: 18px;font-size : 18px;">We would be glad to reserve a table for you at
               our
               restaurant!</div>
@@ -214,7 +212,7 @@
                 <p id="p1">"We’ve been told numerous times that our cooking is 'feminine,' which people always intend as a compliment. We’re happy to be identified with femaleness, as strong and proud women, but the masculine/feminine binary has no legitimate place in culinary expression or its criticism. It’s an artificial construct we’d be happy to see done away with." </p>
             </div> -->
         <div>
-          <img style="padding:  300px" src="Images/reservation/chef.png">
+          <img style="padding:  200px" src="Images/reservation/chef.png">
         </div>
       </div>
 
@@ -284,12 +282,12 @@
       </script>
 
 
-
-      <p>BEST RESTAURANT IN TOWN <strong>Note:</strong> Try every food.</p>
+        
+      <p id="Note">BEST RESTAURANT IN TOWN <strong>Note:</strong> Try every food.</p>
 
       <div class="fixed-bg-2"></div>
 
-      <div style="height:300px;background-color:white;">
+      <div style="height:200px;background-color:white;">
 
 
 
