@@ -134,7 +134,46 @@
               <button type="button" onclick="sendEmail()">Submit</button>
             </p>
           </form>
-          
+          <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script type="text/javascript">
+        function sendEmail() {
+            var name = $("#name");
+            var lname = $("#lname");
+            var phone = $("#phone");
+            var email = $("#email");
+            var message = $("#message");
+            //var body = $("#body");
+
+            if (isNotEmpty(name) && isNotEmpty(lname) && isNotEmpty(phone) && isNotEmpty(email) && isNotEmpty(message)) {
+                $.ajax({
+                   url: 'mail.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       lname: lname.val(),
+                       phone: phone.val(),
+                       email: email.val(),
+                       message: message.val(),
+                       //body: body.val()
+                   }, success: function (response) {
+                        $('#myForm')[0].reset();
+                        $('.sent-notification').text("Message Sent Successfully.");
+                   }
+                });
+            }
+        }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '2px solid red');
+
+            return true;
+        }
+    </script>
           <!-- End #contact-form -->
         </div>
         <!-- End .contact -->
