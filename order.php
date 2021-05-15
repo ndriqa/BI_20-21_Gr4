@@ -73,7 +73,7 @@
             Tell us what you want to eat and we'll prepare and deliver it to your address!
           </strong></em></p>
     </div>
-    <form id="porosia" onsubmit="return false;">
+    <form id="porosia" onsubmit="return false;" action="./order_db.php" method="POST">
       <fieldset id="lloji_i_porosise">
         <div class="form-section">
           <label for="foods">Food type:</label>
