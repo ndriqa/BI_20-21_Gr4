@@ -169,7 +169,7 @@
                 caller.css('border', '1px solid red');
                 return false;
             } else
-                caller.css('border', '2px solid red');
+                caller.css('border', '3px solid black');
 
             return true;
         }
