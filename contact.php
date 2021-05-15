@@ -104,29 +104,29 @@
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
 
-          <form id="contact-form">
+          <form id="contact-form" action="./mail.php" method="POST">
             <p>
-              <label>Name</label>
+              <label for ="name">Name</label>
               <input type="text" name="name" id="name" required />
             </p>
 
             <p>
-              <label>Last Name</label>
+              <label for="lastname">Last Name</label>
               <input type="text" name="lname" id="lname" />
             </p>
 
             <p>
-              <label>E-mail Address</label>
+              <label for="email">E-mail Address</label>
               <input type="email" name="email" id="email" required />
             </p>
 
             <p>
-              <label>Phone Number</label>
+              <label for="phone">Phone Number</label>
               <input type="text" name="phone" id="phone" />
             </p>
 
             <p class="full">
-              <label>Message</label>
+              <label for ="message">Message</label>
               <textarea name="message" rows="6" id="message"></textarea>
             </p>
 
