@@ -452,7 +452,13 @@
 						<span class="subheading">Specialties</span>
 						<h2 class="mb-4">Breakfast</h2>
 					</div>
-
+					<?php
+						// Defining variables
+						$col1 = array("Egg and Bacon", "Breakfast Champion", "Vegetarian Omelette","Avocado Omelette", "Sea Omlet");
+						$col2 = array("Blueberry Pancakes", "Strawberry Pancakes", "Oat Meal","French Toast", "Breakfast Burrito");
+						$col3 = array("Waffle", "Bagel", "Cereal","Toast", "Crepes");
+						sort($col1);
+					?>
 					<div class="menut">
 						<div class="menu-wrap" style="padding: 60px;">
 							<div class="heading-menu text-center ftco-animate fadeInUp ftco-animated">
@@ -464,7 +470,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Egg and Bacon</h3>
+											<h3><?php echo $col1[0];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$11</span>
@@ -480,7 +486,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Breakfast Champion</h3>
+											<h3><?php echo $col1[1];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$15</span>
@@ -498,7 +504,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Vegetarian Omelette</h3>
+											<h3><?php echo $col1[2];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$11</span>
@@ -515,7 +521,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Avocado Omelette</h3>
+											<h3><?php echo $col1[3];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$11</span>
@@ -532,7 +538,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Sea Omlet</h3>
+											<h3><?php echo $col1[4];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$15</span>
@@ -554,7 +560,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Blueberry Pancakes</h3>
+											<h3><?php echo $col2[0];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$9</span>
@@ -570,7 +576,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Strawberry Pancakes</h3>
+											<h3><?php echo $col2[1];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$9</span>
@@ -586,7 +592,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Oatmeal</h3>
+											<h3><?php echo $col2[2];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$8</span>
@@ -602,7 +608,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>French Toast</h3>
+											<h3><?php echo $col2[3];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$9</span>
@@ -618,7 +624,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Breakfast Burrito</h3>
+											<h3><?php echo $col2[4];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$11</span>
@@ -640,7 +646,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Waffle</h3>
+											<h3><?php echo $col3[0];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$6</span>
@@ -656,7 +662,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Bagel</h3>
+											<h3><?php echo $col3[1];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$4</span>
@@ -672,7 +678,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Cereal</h3>
+											<h3><?php echo $col3[2];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$4</span>
@@ -688,7 +694,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Toast</h3>
+											<h3><?php echo $col3[3];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$5</span>
@@ -704,7 +710,7 @@
 								<div class="text">
 									<div class="d-flex">
 										<div class="one-half">
-											<h3>Crepes</h3>
+											<h3><?php echo $col3[4];?></h3>
 										</div>
 										<div class="one-forth">
 											<span class="price">$4</span>
