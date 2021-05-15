@@ -103,7 +103,7 @@
         <!-- CONTACT FORM -->
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
-
+          <h4 class="sent-notification"></h4>
           <form id="contact-form" action="./mail.php" method="POST">
             <p>
               <label for ="name">Name</label>
@@ -157,7 +157,7 @@
                        message: message.val(),
                        //body: body.val()
                    }, success: function (response) {
-                        $('#myForm')[0].reset();
+                        $('#contact-form')[0].reset();
                         $('.sent-notification').text("Message Sent Successfully.");
                    }
                 });
