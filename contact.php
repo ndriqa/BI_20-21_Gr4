@@ -104,7 +104,7 @@
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
           <h4 class="sent-notification"></h4>
-          <form id="contact-form" action="./mail.php" method="POST">
+          <form id="contact-form" >
             <p>
               <label for ="name">Name</label>
               <input type="text" name="name" id="name" required />
@@ -169,7 +169,7 @@
                 caller.css('border', '1px solid red');
                 return false;
             } else
-                caller.css('border', '3px solid black');
+                caller.css('border', '');
 
             return true;
         }
