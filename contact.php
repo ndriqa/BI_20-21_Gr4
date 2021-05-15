@@ -131,9 +131,10 @@
             </p>
 
             <p class="full">
-              <button type="submit">Submit</button>
+              <button type="button" onclick="sendEmail()">Submit</button>
             </p>
           </form>
+          
           <!-- End #contact-form -->
         </div>
         <!-- End .contact -->
