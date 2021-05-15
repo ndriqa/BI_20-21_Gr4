@@ -150,25 +150,27 @@
         <div style="height:800px;background-color:white;">
 
 
-          <form method="post" action="//submit.form" onSubmit="return validateForm();">
-            <div class="forma" style="max-width: 400px;">
-            </div>
-            <div id='name'
-              style="padding-bottom: 18px;font-size : 50px; font-family:  Brush Script MT, Brush Script Std, cursive; color:#87a3ab;">
-              Table Reservation</div>
+          <form action="reservationForm.php" method="POST">
+
+            First name:
+
             <div id='name' style="padding-bottom: 18px;font-size : 18px;">We would be glad to reserve a table for you at
-              our restaurant!</div>
+              our
+              restaurant!</div>
             <div id='name' style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br />
               <input type="text" id="data_3" name="data_3" style="max-width : 400px;" class="form-control" />
             </div>
-            <div id='name' style="padding-bottom: 18px;">Phone<br />
+            <div id='name' style="padding-bottom: 18px;">Surname<br />
               <input type="text" id="data_4" name="data_4" style="max-width : 400px;" class="form-control" />
             </div>
-            <div id='name' style="padding-bottom: 18px;">Email<br />
+            <div id='name' style="padding-bottom: 18px;">Phone<br />
               <input type="text" id="data_5" name="data_5" style="max-width : 400px;" class="form-control" />
             </div>
+            <div id='name' style="padding-bottom: 18px;">Email<br />
+              <input type="text" id="data_6" name="data_6" style="max-width : 400px;" class="form-control" />
+            </div>
             <div id='name' style="padding-bottom: 18px;">Date<span style="color: red;"> *</span><br />
-              <input type="text" id="data_6" name="data_6" style="max-width : 250px;" class="form-control" />
+              <input type="text" id="data_7" name="data_7" style="max-width : 250px;" class="form-control" />
             </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript">
             </script>
@@ -176,14 +178,14 @@
               type="text/css" />
             <script type="text/javascript">
               new Pikaday({
-                field: document.getElementById('data_6')
+                field: document.getElementById('data_7')
               });
             </script>
             <div id='name' style="padding-bottom: 18px;">Time<span style="color: red;"> *</span><br />
-              <input type="text" id="data_7" name="data_7" style="max-width : 250px;" class="form-control" />
+              <input type="text" id="data_8" name="data_8" style="max-width : 250px;" class="form-control" />
             </div>
             <div id='name' style="padding-bottom: 18px;">Number of Attendees<span style="color: red;"> *</span><br />
-              <select id="data_8" name="data_8" style="max-width : 250px;" class="form-control">
+              <select id="data_9" name="data_9" style="max-width : 250px;" class="form-control">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -198,14 +200,14 @@
               </select>
             </div>
             <div id='name' style="padding-bottom: 18px;">Comments / Additional Requests<br />
-              <textarea id="data_9" false name="data_9" style="max-width : 400px;" rows="6"
+              <textarea id="data_10" false name="data_10" style="max-width : 400px;" rows="6"
                 class="form-control"></textarea>
             </div>
-            <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit" /></div>
-            <div>
-              <!--<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-              <!--<script src="https://www.100forms.com/js/FORMKEY:GP2NQBS3GS2Z/SEND:my@email.com" type="text/javascript"></script>-->
-            </div>
+
+            <input type="hidden" name="form_submitted" value="1" />
+
+            <input type="submit" value="Submit">
+
           </form>
         </div>
         <!--<div>
