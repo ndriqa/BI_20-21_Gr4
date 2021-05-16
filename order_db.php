@@ -23,7 +23,7 @@
                     <tr>
                         <td><?php echo ($_POST['food_name']); ?></td>
                         <td><?php echo ($_POST['drink_name']); ?></td>
-                        <td><?php echo ($_POST['radio']); ?></td>
+                        <td><?php echo ($_POST['payment']); ?></td>
                         <td><?php echo ($_POST['total_price']); ?></td>
                     </tr>
                 </table>
@@ -52,25 +52,33 @@
         <br>
         <br>
 
-        <?php echo ($_POST['fname']); ?>
-
-        <?php
-        echo ($_POST['fname']);
-        echo ($_POST['lname']);
-        echo ($_POST['num']);
-        echo ($_POST['address']);
-        echo ($_POST['food_name']);
-        echo ($_POST['drink_name']);
-        echo ($_POST['total_price']);
-        echo ($_POST['radio']);
-        ?>
-        <a href="order.php">return back</a>
         <?php
         $db = mysqli_connect("localhost", "root", "", "freshness_db");
         if (!$db) {
             die("Connection failed: " . mysqli_connect_error());
         }
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $num = str_replace("+", "", $_POST['num']);
+        $address = str_replace(",", "/", $_POST['address']);
+        $food = $_POST['food_name'];
+        $drink = $_POST['drink_name'];
+        $pay = $_POST['payment'];
+        $price = str_replace("$", "", $_POST['total_price']);
+
+        $sql = "INSERT INTO orders (first_name, last_name, number, address, food, drink, price, payment_method) VALUES ('$fname', '$lname', '$num', '$address', '$food', '$drink', '$price', '$pay')";
+
+        if (mysqli_query($db, $sql)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($db);
+        }
+        mysqli_close($db);
+
         ?>
+
+        <a href="order.php">return back</a>
+
     <?php endif; ?>
 </body>
 

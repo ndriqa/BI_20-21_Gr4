@@ -116,14 +116,14 @@
           </div>
         </div>
         <div id="cart">
-          <input type="text" class="message" id="food_name" readonly autocomplete="off"></input>
+          <input type="text" class="message" name="food_name" id="food_name" readonly autocomplete="off"></input>
           <h2 id="food_price"></h2>
           <h3>+</h3>
-          <input type="text" class="message" id="drink_name" readonly autocomplete="off"></input>
+          <input type="text" class="message" name="drink_name" id="drink_name" readonly autocomplete="off"></input>
           <h2 id="drink_price"></h2>
           <hr>
           <h3>Total</h3>
-          <input type="text" class="message" id="total_price" readonly autocomplete="off"></input>
+          <input type="text" class="message" name="total_price" id="total_price" readonly autocomplete="off"></input>
         </div>
         <div id="user_info">
           <div id="user_name">
