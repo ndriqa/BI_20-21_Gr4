@@ -33,7 +33,17 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 		'allow_self_signed'=>false
 	));
     
-    
+    $alert = '';
+
+    if($mail->send()){
+        $alert = '<div class="alert-success">
+                     <span>Message Sent! Thank you for contacting us.</span>
+                    </div>';}
+                    else {
+                        $alert = '<div class="alert-error">
+                     <span>Message Failed to sent! Thank you for contacting us.</span>
+                    </div>';
+                    }
 	
 	echo $msg;}
 
