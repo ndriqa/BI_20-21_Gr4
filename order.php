@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" manifest="https://ndriqa.github.io/PWWW20-21_Gr10/order.html">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="style/style.css">
   <link rel="stylesheet" type="text/css" href="style/order_style.css">
   <title>Order Now</title>
@@ -49,16 +47,17 @@
           <li class="nav-item"><a class="nav-link nm-bg" href="./meny.php">MENU </a></li>
           <li class="nav-item"><a class="nav-link nav-active" href="./order.php">ORDER NOW </a></li>
           <li class="nav-item"><a class="nav-link nm-bg" href="./reservations.php">RESERVATION </a>
-            <li class="nav-item">
-              <div class="dropdown">
-                <a class="nm-bg">OUR STAFF</a>
-                <div class="dropdown-content">
-                  <a class="nav-link nm-bg" href="./board.php">BOARD</a> <hr>
-                  <a class="nav-link nm-bg" href="./chefs.php">CHEFS</a>
-                </div>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="nm-bg">OUR STAFF</a>
+              <div class="dropdown-content">
+                <a class="nav-link nm-bg" href="./board.php">BOARD</a>
+                <hr>
+                <a class="nav-link nm-bg" href="./chefs.php">CHEFS</a>
               </div>
-            </li>
-            <li class="nav-item nm-bg"><a class="nav-link" href="./contact.php">CONTACT </a>
+            </div>
+          </li>
+          <li class="nav-item nm-bg"><a class="nav-link" href="./contact.php">CONTACT </a>
         </ul>
       </nav>
     </div>
@@ -73,7 +72,7 @@
             Tell us what you want to eat and we'll prepare and deliver it to your address!
           </strong></em></p>
     </div>
-    <form id="porosia" onsubmit="return false;" action="./order_db.php" method="POST">
+    <form id="porosia" action="order_db.php" method="POST">
       <fieldset id="lloji_i_porosise">
         <div class="form-section">
           <label for="foods">Food type:</label>
@@ -117,18 +116,18 @@
           </div>
         </div>
         <div id="cart">
-          <h3 class="message" id="food_name"></h3>
+          <input type="text" class="message" id="food_name" readonly autocomplete="off"></input>
           <h2 id="food_price"></h2>
           <h3>+</h3>
-          <h3 class="message" id="drink_name"></h3>
+          <input type="text" class="message" id="drink_name" readonly autocomplete="off"></input>
           <h2 id="drink_price"></h2>
           <hr>
           <h3>Total</h3>
-          <h2 class="message" id="total_price"></h2>
+          <input type="text" class="message" id="total_price" readonly autocomplete="off"></input>
         </div>
         <div id="user_info">
           <div id="user_name">
-            <label for="fname" >First name:</label>
+            <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname" required>
             <label for="lname">Last name:</label>
             <input type="text" id="lname" name="lname" required>
@@ -136,7 +135,7 @@
             <input type="text" id="num" name="num" required>
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" required><br>
-                      
+
           </div>
           <div id="user_submit">
             <h4 class="message">Payment</h4>
@@ -148,8 +147,9 @@
             <label for="card">Credit Card</label>
             <input type="radio" id="other" name="payment" value="other">
             <label for="other">Other</label> <br>
-          
-            <button id="cash_out" onclick="cashout()" type="button">Submit</button>
+
+            <input type="hidden" name="form1_submitted" value="1" />
+            <input id="cash_out" onclick="cashout()" type="submit"></input>
           </div>
         </div>
 

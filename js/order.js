@@ -195,18 +195,17 @@ function drinkGotChosen(d) {
     document.getElementById("chosen_drink").src = drinkImage;
 
     
-    document.getElementById("food_name").innerText = foodName;
+    document.getElementById("food_name").value = foodName;
     document.getElementById("food_price").innerText = `${fprice}$`;
-    document.getElementById("drink_name").innerText = drinkName;
+    document.getElementById("drink_name").value = drinkName;
     document.getElementById("drink_price").innerText = `${dprice}$`;
 
-    document.getElementById("total_price").innerText = `${fprice+dprice}$`;
+    document.getElementById("total_price").value = `${fprice+dprice}$`;
 }
 function cashout() {
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
     let phone = document.getElementById("num").value;
-    console.log(phone);
     if (!fname || !lname){
         window.alert("Please write first and last name");
         throw new Error("First or last name not valid");
@@ -215,8 +214,6 @@ function cashout() {
         window.alert("The number should be of format: +123456789");
         throw new Error("Phone number not valid");
     } else {
-        document.getElementById("perzgjedhja").style.display = "none";
-        document.getElementById("intro").style.display = "block";
         window.alert("Order has been made and will arrive shortly");
     }
 
