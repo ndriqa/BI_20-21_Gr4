@@ -1,5 +1,3 @@
-const MOON = '🌙';
-const SUN = '☀️';
 const DARK_MODE = 'dark';
 const LIGHT_MODE = 'light';
 const DEFAULT_MODE = LIGHT_MODE;
@@ -9,10 +7,13 @@ const btn = document.querySelector('#theme-switcher');
 init();
 
 function init() {
-    let storedMode = localStorage.getItem('mode');
-    if (!storedMode) {
+    let storedMode = ""+getCookie("night");
+    if (storedMode) {
         storedMode = DEFAULT_MODE;
-        localStorage.setItem('mode', DEFAULT_MODE);
+        setCookie("night", "false")
+    } else {
+        storedMode = DARK_MODE
+        setCookie("night", "true");
     }
     setMode(storedMode);
 }
@@ -32,26 +33,41 @@ function setMode(mode = DEFAULT_MODE) {
 }
 
 btn.addEventListener('click', function () {
-    let mode = localStorage.getItem('mode');
+    let mode = getCookie("night");
     if (mode) {
-        let newMode = mode == DARK_MODE ? LIGHT_MODE : DARK_MODE;
-        setMode(newMode);
-        localStorage.setItem('mode', newMode);
+        setMode(LIGHT_MODE);
+        setCookie("night", "false");
+    } else {
+        setMode(DARK_MODE);
+        setCookie("night", "true");
     }
 });
 
-
 function updateBackground() {
-    var hr = (new Date()).getHours();
-    let storedMode = localStorage.getItem('mode');
-
-    if (hr >= 18 || hr < 8) {
-        storedMode = DARK_MODE;
-    } else if (hr > 8 && hr < 19) {
-        storedMode = LIGHT_MODE;
+    let nightC = getCookie("night")
+    if (nightC){
+        setMode(DARK_MODE);
+    } else {
+        setMode(LIGHT_MODE);
     }
+}
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";" +"path=/";
+}
 
-    setMode(storedMode);
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 setInterval(updateBackground, 1000 * 60);

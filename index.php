@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" manifest="https://ndriqa.github.io/PWWW20-21_Gr10/index.html">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="./style/style.css">
   <title>Freshness</title>
 
@@ -16,6 +14,15 @@
 </head>
 
 <body class="nm-bg">
+  <?php
+  session_start();
+
+  if (!isset($_COOKIE["night"])) {
+    $_COOKIE['night'] = "false";
+  } else {
+  }
+
+?>
   <!--HEADER STUFF-->
   <header class="nm-bg">
     <div class="social-top nm-bg">
@@ -29,7 +36,10 @@
         </div>
 
         <div>
-          <button id="theme-switcher">Change theme</button>
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET">
+            <input type="hidden" name="theme_submitted" value="1" />
+            <input type="submit" name="theme-switcher" id="theme-switcher" value="Change theme"></input>
+          </form>
           <span id="verticalLine"></span>
           <input type="text" name="" id="searchBox" placeholder="Search Our Website...." />
           <input type="submit" value="SEARCH" />
@@ -49,23 +59,24 @@
 
       <nav class="header-nav-bar ">
         <ul id="menu">
-          <li class="nav-item"><a class="nav-link nav-active" href="./index.php" >HOME</a> </li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./about.php" >ABOUT US </a></li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./meny.php" >MENU </a></li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./order.php" >ORDER NOW </a></li>
-          <li class="nav-item"><a class="nav-link nm-bg" href="./reservations.php" >RESERVATION </a></li>
+          <li class="nav-item"><a class="nav-link nav-active" href="./index.php">HOME</a> </li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./about.php">ABOUT US </a></li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./meny.php">MENU </a></li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./order.php">ORDER NOW </a></li>
+          <li class="nav-item"><a class="nav-link nm-bg" href="./reservations.php">RESERVATION </a></li>
           <li class="nav-item">
             <div class="dropdown">
               <a class="nm-bg">OUR STAFF</a>
               <div class="dropdown-content">
-                <a href="./board.php" class="nav-link nm-bg" >BOARD</a> <hr>
-                <a href="./chefs.php" class="nav-link nm-bg" >CHEFS</a>
+                <a href="./board.php" class="nav-link nm-bg">BOARD</a>
+                <hr>
+                <a href="./chefs.php" class="nav-link nm-bg">CHEFS</a>
               </div>
             </div>
           </li>
           <li class="nav-item"><a class="nav-link nm-bg" href="./contact.php">CONTACT </a></li>
         </ul>
-      </nav> 
+      </nav>
     </div>
   </header>
 
@@ -73,7 +84,7 @@
 
   <!--ACTUAL PAGE STUFF-->
   <main>
-    
+
     <div id="info" class="sections">
 
       <div class="dishes-panel">
@@ -89,7 +100,7 @@
               Lazanje
             </h1>
             <div class="slide-buttons-panel">
-              <button class="slide-button"  onclick="forcedPrev()">&lt;</button>
+              <button class="slide-button" onclick="forcedPrev()">&lt;</button>
               <button class="slide-button" onclick="forcedNext()">&gt;</button>
             </div>
           </div>
@@ -103,12 +114,12 @@
         </div>
         <div class="dots-div">
           <button>READ MORE &#187;</button>
-        <div class="dots">
-          <span class="dot" onclick="changeSlide(1)"></span>
-          <span class="dot" onclick="changeSlide(2)"></span>
-          <span class="dot" onclick="changeSlide(3)"></span>
-          <span class="dot" onclick="changeSlide(4)"></span>
-        </div>
+          <div class="dots">
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+            <span class="dot" onclick="changeSlide(3)"></span>
+            <span class="dot" onclick="changeSlide(4)"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -272,4 +283,5 @@ to last throughout the day
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/nightmode.js"></script>
+
 </html>
