@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Invoice</title>
+		<title>Your Ticket</title>
 		<link rel="stylesheet" href="style/reservationFormStyle.css">		
 	</head>
 	<body>
@@ -75,6 +75,9 @@
 				<p>Ju lutem ruani tiketen e rezervimit!</p>
 			</div>
 		</aside>
+        <br>
+        <br> 
+        <p>Click to go <a href="reservations.php">BACK</a> to the form</p>
         <?php endif; ?> 
 	</body>
 </html>
