@@ -150,7 +150,7 @@
         <div style="height:800px;background-color:white;">
 
 
-          <form action="reservationForm.php" method="POST">
+          <form action="reservationForm.php" method="POST" onSubmit="return validateForm();">
             <br>
             <div id='name' style="padding-bottom: 18px;font-size : 18px;">We would be glad to reserve a table for you at
               our
@@ -223,15 +223,15 @@
             alert('Name is required!');
             return false;
           }
-          if (!validateEmail(document.getElementById('data_5').value.trim())) {
+          if (!validateEmail(document.getElementById('data_6').value.trim())) {
             alert('Email must be a valid email address!');
             return false;
           }
-          if (isEmpty(document.getElementById('data_6').value.trim())) {
+          if (isEmpty(document.getElementById('data_7').value.trim())) {
             alert('Date is required!');
             return false;
           }
-          if (isEmpty(document.getElementById('data_7').value.trim())) {
+          if (isEmpty(document.getElementById('data_8').value.trim())) {
             alert('Time is required!');
             return false;
           }

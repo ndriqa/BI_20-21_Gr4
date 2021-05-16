@@ -77,7 +77,7 @@
 		</aside>
         <br>
         <br> 
-        <p>Click to go <a href="reservations.php">BACK</a> to the form</p>
+         <a href="reservations.php">return back</a>
         <?php endif; ?> 
 	</body>
 </html>
