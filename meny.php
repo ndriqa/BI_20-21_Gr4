@@ -181,7 +181,13 @@
 								$pasta = array("Spaghetti Bolognese", "Four Cheese Pasta", "Pasta Con Pomodoro","Lasagna", "Pasta Arrabiata");
 								$pizza = array("Cheese Pizza", "Pepperoni", "Veggie Pizza","Margherita Pizza", "BBQ Chicken Pizza");
 								$starters = array("Stir Fried Chilli Chicken", "Chicken Satay", "Cheese Balls","French Fries", "Microwave Paneer Tikkas");
+							
+								// Define an associative array
+								$pastaPrices = array("Spaghetti Bolognese"=>20, "Four Cheese Pasta"=>19, "Pasta Con Pomodoro"=>15, "Lasagna"=>13, "Pasta Arrabiata"=>21);
+								$pizzaPrices = array("Cheese Pizza"=>15, "Pepperoni"=>19, "Veggie Pizza"=>15, "Margherita Pizza"=>13, "BBQ Chicken Pizza"=>17);
+								$startersPrices = array("Stir Fried Chilli Chicken"=>22, "Chicken Satay"=>13, "Cheese Balls"=>12, "French Fries"=>13, "Microwave Paneer Tikkas"=>14);
 							?>
+						
 								
 							
 								<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
@@ -193,7 +199,7 @@
 												<h3><?php echo $pasta[0];?></h3>
 											</div>
 											<div class="one-forth">
-												<span class="price">$20</span>
+												<span class="price">$<?php echo $pastaPrices["Spaghetti Bolognese"];?></span>
 											</div>
 										</div>
 										<p><span>Beef</span>, <span>Red chilli</span>, <span>Tomatoe puree</span></p>
@@ -209,7 +215,7 @@
 												<h3><?php echo $pasta[1];?></h3>
 											</div>
 											<div class="one-forth">
-												<span class="price">$19</span>
+												<span class="price">$<?php echo $pastaPrices["Four Cheese Pasta"];?></span>
 											</div>
 										</div>
 										<p><span>Mozzarella</span>, <span>Gorgonzola</span>, <span>Parmesan</span>,
@@ -227,7 +233,7 @@
 												<h3><?php echo $pasta[2];?></h3>
 											</div>
 											<div class="one-forth">
-												<span class="price">$19</span>
+												<span class="price">$<?php echo $pastaPrices["Pasta Con Pomodoro"];?></span>
 											</div>
 										</div>
 										<p><span>Tomatoes</span>, <span>Basil</span>, <span>Peppers</span>,
@@ -244,7 +250,7 @@
 												<h3><?php echo $pasta[3];?></h3>
 											</div>
 											<div class="one-forth">
-												<span class="price">$18</span>
+												<span class="price">$<?php echo $pastaPrices["Lasagna"];?></span>
 											</div>
 										</div>
 										<p><span>Ragù</span>, <span>Basil</span>, <span>Cheese</span>,
@@ -261,7 +267,7 @@
 												<h3><?php echo $pasta[4];?></h3>
 											</div>
 											<div class="one-forth">
-												<span class="price">$20</span>
+												<span class="price">$<?php echo $pastaPrices["Pasta Arrabiata"];?></span>
 											</div>
 										</div>
 										<p><span>Meat</span>, <span>Tomatoe</span>, <span>Hot sauce</span>,
@@ -284,7 +290,7 @@
 											<h3><?php echo $pizza[0];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$14</span>
+											<span class="price">$<?php echo $pizzaPrices["Cheese Pizza"];?></span>
 										</div>
 									</div>
 									<!--  <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> -->
@@ -300,7 +306,7 @@
 											<h3><?php echo $pizza[1];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$16</span>
+											<span class="price">$<?php echo $pizzaPrices["Pepperoni"];?></span>
 										</div>
 									</div>
 									<!--  <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> -->
@@ -316,7 +322,7 @@
 											<h3><?php echo $pizza[2];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$15</span>
+											<span class="price">$<?php echo $pizzaPrices["Veggie Pizza"];?></span>
 										</div>
 									</div>
 									<!--<p><span>Meat</span>, <span>Rice</span></p> -->
@@ -332,7 +338,7 @@
 											<h3><?php echo $pizza[03];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$14</span>
+											<span class="price">$<?php echo $pizzaPrices["Margherita Pizza"];?></span>
 										</div>
 									</div>
 									<!--<p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> -->
@@ -348,7 +354,7 @@
 											<h3><?php echo $pizza[4];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$18</span>
+											<span class="price">$<?php echo $pizzaPrices["BBQ Chicken Pizza"];?></span>
 										</div>
 									</div>
 									<!--<p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> -->
@@ -369,7 +375,7 @@
 											<h3><?php echo $starters[0];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$21</span>
+											<span class="price">$<?php echo $startersPrices["Stir Fried Chilli Chicken"];?></span>
 										</div>
 									</div>
 									<p><span>Chicken</span>, <span>Chilli sauce</span>, <span>Tomatoe puree</span>, </p>
@@ -385,7 +391,7 @@
 											<h3><?php echo $starters[1];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$20</span>
+											<span class="price">$<?php echo $startersPrices["Chicken Satay"];?></span>
 										</div>
 									</div>
 									<p><span>Chicken breast</span>, <span>Soy sauce</span>, <span>Peanut butter</span>
@@ -402,7 +408,7 @@
 											<h3><?php echo $starters[2];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$14</span>
+											<span class="price">$<?php echo $startersPrices["Cheese Balls"];?></span>
 										</div>
 									</div>
 									<p><span>Cream cheese</span>, <span>Grated semi-soft</span>, <span>Flavorings</span>
@@ -419,7 +425,7 @@
 											<h3><?php echo $starters[3];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$5</span>
+											<span class="price">$<?php echo $startersPrices["French Fries"];?></span>
 										</div>
 									</div>
 									<!--<p><span>Meat</span>, <span>Tomatoe</span>, <span>Hot sauce</span>, <span>Basil</span></p> -->
@@ -435,7 +441,7 @@
 											<h3><?php echo $starters[4];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$10</span>
+											<span class="price">$<?php echo $startersPrices["Microwave Paneer Tikkas"];?></span>
 										</div>
 									</div>
 									<p><span>Paneer cubes</span>, <span>chaat masala</span>, <span>Chilli powder</span>
