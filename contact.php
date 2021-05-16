@@ -134,14 +134,45 @@
               <button type="submit" name="submit" id="submit" >Submit</button>
             </p>
           </form>
-          
-          
+          <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script>
+	  jQuery('#contact-form').on('submit',function(e){
+		jQuery('#msg').html('');
+		jQuery('#submit').html('Please wait');
+		jQuery('#submit').attr('disabled',true);
+		jQuery.ajax({
+			url:'mail.php',
+			type:'POST',
+			data:jQuery('#contact-form').serialize(),
+      /*data: {
+                       name: name.val(),
+                       lname: lname.val(),
+                       phone: phone.val(),
+                       email: email.val(),
+                       message: message.val(),
+                       //body: body.val()
+                   }*/
+			success:function(result){
+				jQuery('#msg').html(result);
+				jQuery('#submit').html('Submit');
+				jQuery('#submit').attr('disabled',false);
+				jQuery('#contact-form')[0].reset();
+        jQuery('#contact-form').text("Message Sent Successfully.");
+			}
+		});
+		e.preventDefault();
+	  });
+	  </script>
+
           <!-- End #contact-form -->
         </div>
         <!-- End .contact -->
       </div>
       <!-- End .wrapper -->
     </div>
+
+
     <section class="sectionn2">
       <div class="sec2title">
         <h2 class="text-message">Location (Get directions)</h2>
