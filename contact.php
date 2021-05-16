@@ -86,6 +86,25 @@
         </div>
       </section>
       
+      <?php require_once("validator/ContactValidator.php");
+
+    function showError($field, $text){
+        if(isset($GLOBALS["errors"]) && isset($GLOBALS["errors"][$field]))
+        {
+            $errors = $GLOBALS["errors"];
+            echo $errors[$field] . '" style= "border: 1px solid red; ';
+        }
+        else
+        {
+            $temp = "";
+
+            if(isset($_POST[$field]))
+            {
+                $temp = $_POST[$field];
+            }
+            echo $text . '" value="'.$temp.'"';
+        }
+    }?>
 
       <div class="wrapper">
         <!-- RESTAURANT INFORMATION -->
@@ -99,46 +118,7 @@
           </ul>
         </div>
         
-        <?php
-        require_once("validator/ContactValidator.php");
-
-if(isset($_POST['submit']))
-{
-    $validatorObj = new ContactValidator();
-
-    $errors = $validatorObj -> getErrors();
-
-    if(count($errors) == 0)
-    {
-        require_once("contactForm_db.php");
-
-        $conn = Database::getConnection();
-
-        $sql = "INSERT INTO contact_us (name, lname, email, phone, message)
-        VALUES ('".$_POST["name"]."', '".$_POST["lname"]."', '".$_POST["email"]."', '".$_POST["phone"]."', '".$_POST["message"]."')";
-
-        $conn->query($sql);
-    }
-}
-
-function showError($field, $text)
-{
-    if(isset($GLOBALS["errors"]) && isset($GLOBALS["errors"][$field]))
-    {
-        $errors = $GLOBALS["errors"];
-        echo $errors[$field] . '" style= "border: 1px solid red; ';
-    }
-    else
-    {
-        $temp = "";
-
-        if(isset($_POST[$field]))
-        {
-            $temp = $_POST[$field];
-        }
-        echo $text . '" value="'.$temp.'"';
-    }
-}?>
+    
 
         <!-- CONTACT FORM -->
         <div class="contact">
