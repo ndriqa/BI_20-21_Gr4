@@ -1,58 +1,40 @@
-<?php 
-
-use PHPMailer\PHPMailer\PHPMailer;
-
-if (isset($_POST['name']) && isset($_POST['email'])) {
-    $name = $_POST['name'];
-    $lname = $_POST['lname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
-
-    require_once "PHPMailer/PHPMailer.php";
-    require_once "PHPMailer/SMTP.php";
-    require_once "PHPMailer/Exception.php";
-
-    $mail = new PHPMailer();
-
-    //SMTP Settings
-    $mail->isSMTP();
-    $mail->Host = "smtp.gmail.com";
-    $mail->SMTPAuth = true;
-    $mail->Username = "biznesi.interneti@gmail.com"; //enter you email address
-    $mail->Password = 'biznesi1'; //enter you email password
-    $mail->Port = 465;
-    $mail->SMTPSecure = "ssl";
-
-    //Email Settings
-    $mail->isHTML(true);
-    $mail->setFrom($email, $name);
-    $mail->addAddress("sadikuurata@gmail.com"); //enter you email address
-    $mail->Subject = ("$email ($subject)");
-    $mail->Body = $body;
-
-    if ($mail->send()) {
-        $status = "success";
-        $response = "Email is sent!";
-    } else {
-        $status = "failed";
-        $response = "Something is wrong: <br><br>" . $mail->ErrorInfo;
-    }
-
-    exit(json_encode(array("status" => $status, "response" => $response)));
-}
-
-
-
-/*$name = $_POST['name'];
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$content="From: $name $lastname \n Message: $message";
-$recipient = "sadikuurata@gmail.com";
-$subject = "New message from Freshness";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $content, $mailheader) or die("Error!");
-echo "Thank You!";*/
+<?php
+include('contactForm_db.php');
+$msg="";
+if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])){
+	$name=$_POST['name'];
+	$lname=$_POST['lname'];
+	$email=$_POST['email'];
+	$phone=$_POST['phone'];
+	$message=$_POST['message'];
+	
+	$mysql="insert into contact_us(name,lname,email,phone,message) values('$name','$lname','$email','$phone','$message')";
+	$msg="Thanks message";
+	
+	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$lname</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Comment</td><td>$message</td></tr></table>";
+	
+	include('PHPMailer/PHPMailerAutoload.php');
+	$mail=new PHPMailer(true);
+	$mail->isSMTP();
+	$mail->Host="smtp.gmail.com";
+	$mail->Port=587;
+	$mail->SMTPSecure="tls";
+	$mail->SMTPAuth=true;
+	$mail->Username="biznesi.interneti@gmail.com";
+	$mail->Password="biznesi1";
+	$mail->SetFrom("biznesi.interneti@gmail.com");
+	$mail->addAddress("biznesi.interneti@gmail.com");
+	$mail->IsHTML(true);
+	$mail->Subject="New Contact Us";
+	$mail->Body=$html;
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+    
+    
+	
+	echo $msg;}
 
 ?>

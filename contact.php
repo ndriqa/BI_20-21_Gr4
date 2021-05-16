@@ -104,25 +104,25 @@
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
           <h4 class="sent-notification"></h4>
-          <form id="contact-form" >
+          <form method="post" id="contact-form" >
             <p>
               <label for ="name">Name</label>
-              <input type="text" name="name" id="name" required />
+              <input type="text" name="name" id="name" placeholder="Enter name" required />
             </p>
 
             <p>
               <label for="lastname">Last Name</label>
-              <input type="text" name="lname" id="lname" />
+              <input type="text" name="lname" id="lname" placeholder="Enter lastname" required />
             </p>
 
             <p>
               <label for="email">E-mail Address</label>
-              <input type="email" name="email" id="email" required />
+              <input type="email" name="email" id="email" placeholder="Enter email" required />
             </p>
 
             <p>
               <label for="phone">Phone Number</label>
-              <input type="text" name="phone" id="phone" />
+              <input type="text" name="phone" id="phone" placeholder="Enter phone number" required />
             </p>
 
             <p class="full">
@@ -131,49 +131,11 @@
             </p>
 
             <p class="full">
-              <button type="button" onclick="sendEmail()">Submit</button>
+              <button type="submit" name="submit" id="submit" >Submit</button>
             </p>
           </form>
-          <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-          <script type="text/javascript">
-        function sendEmail() {
-            var name = $("#name");
-            var lname = $("#lname");
-            var phone = $("#phone");
-            var email = $("#email");
-            var message = $("#message");
-            //var body = $("#body");
-
-            if (isNotEmpty(name) && isNotEmpty(lname) && isNotEmpty(phone) && isNotEmpty(email) && isNotEmpty(message)) {
-                $.ajax({
-                   url: 'mail.php',
-                   method: 'POST',
-                   dataType: 'json',
-                   data: {
-                       name: name.val(),
-                       lname: lname.val(),
-                       phone: phone.val(),
-                       email: email.val(),
-                       message: message.val(),
-                       //body: body.val()
-                   }, success: function (response) {
-                        $('#contact-form')[0].reset();
-                        $('.sent-notification').text("Message Sent Successfully.");
-                   }
-                });
-            }
-        }
-
-        function isNotEmpty(caller) {
-            if (caller.val() == "") {
-                caller.css('border', '1px solid red');
-                return false;
-            } else
-                caller.css('border', '');
-
-            return true;
-        }
-    </script>
+          
+          
           <!-- End #contact-form -->
         </div>
         <!-- End .contact -->
