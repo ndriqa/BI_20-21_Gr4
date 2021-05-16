@@ -1,6 +1,6 @@
 <?php
-include 'contactForm_db.php';
-$conn = OpenCon();
+/*include 'contactForm_db.php';
+$conn = getConnection();
 echo "Connected Successfully";
-CloseCon($conn);
+//CloseCon($conn);*/
 ?>

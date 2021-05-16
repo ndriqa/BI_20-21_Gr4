@@ -1,6 +1,5 @@
 <?php
 include('contactForm_db.php');
-
 $msg="";
 if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])){
 	$name=$_POST['name'];
@@ -9,8 +8,9 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 	$phone=$_POST['phone'];
 	$message=$_POST['message'];
 	
-	$mysql="insert into contact_us(name,lname,email,phone,message) values('$name','$lname','$email','$phone','$message')";
-	$msg="Thanks message";
+	//$mysql="insert into contact_us(name,lname,email,phone,message) values('$name','$lname','$email','$phone','$message')";
+	//$msg="Thanks message";
+  
 	
 	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$lname</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Comment</td><td>$message</td></tr></table>";
 	
@@ -47,6 +47,8 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
                     }
 	
 	echo $msg;}
+
+
 
 ?>
 

@@ -114,7 +114,7 @@ if(isset($_POST['submit']))
 
         $conn = Database::getConnection();
 
-        $sql = "INSERT INTO contactform_db (name, lname, email, phone, message)
+        $sql = "INSERT INTO contact_us (name, lname, email, phone, message)
         VALUES ('".$_POST["name"]."', '".$_POST["lname"]."', '".$_POST["email"]."', '".$_POST["phone"]."', '".$_POST["message"]."')";
 
         $conn->query($sql);
