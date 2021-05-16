@@ -10,7 +10,7 @@
 			<h1>Freshness Restaurant Reservation Ticket</h1>
 			<address>
 				<p>Prishtine</p>
-				<p>Rr. Skenderbeu<br>Orange, 10000</p>
+				<p>Rr. Skenderbeu<br>PR, 10000</p>
 				<p>(383) 123456789</p>
 			</address>
 		</header>
@@ -78,6 +78,33 @@
         <br>
         <br> 
          <a href="reservations.php">return back</a>
+		 <br>
+		 
+		<?php
+        $db = mysqli_connect("localhost", "root", "", "freshness_db");
+        if (!$db) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $firstname = $_POST['data_3'];
+        $lastname = $_POST['data_4'];
+        $num = str_replace("+", "", $_POST['data_5']);
+        $email = str_replace(",", "/", $_POST['data_6']);
+		$date = $_POST['data_7'];
+		$time = str_replace(",", "/", $_POST['data_8']);
+        $attendees = $_POST['data_9'];
+        $comment = str_replace("$", "", $_POST['data_10']);
+
+        $sql = "INSERT INTO reservations (firstname, lastname, phone, email, date, time, attendees, comment) VALUES ('$firstname', '$lastname', '$num', '$email', '$date', '$time', '$attendees', '$comment')";
+
+        if (mysqli_query($db, $sql)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($db);
+        }
+        mysqli_close($db);
+
+        ?>
         <?php endif; ?> 
+
 	</body>
 </html>
