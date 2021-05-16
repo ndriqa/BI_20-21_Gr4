@@ -1,18 +1,33 @@
 <?php
-function OpenCon()
- {
- $dbhost = "localhost";
- $dbuser = "root";
- $dbpass = "";
- $db = "contactForm_db";
- $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
- 
- return $conn;
- }
- 
-function CloseCon($conn)
- {
- $conn -> close();
- }
-   
+class Database{
+  
+  const host = "localhost";
+  const db_name = "contactform_db";
+  const username = "root";
+  const password = "";
+  public $conn;
+
+  public static function getConnection(){
+
+      $conn = null;
+
+
+      try
+      {
+          if ($conn = mysqli_connect(self::host, self::username, self::password, self::db_name))
+          {}
+          else
+          {
+              throw new Exception('Unable to connect');
+          }
+      }
+      catch(Exception $e)
+      {
+          echo $e->getMessage();
+      }
+
+
+      return $conn;
+  }
+}
 ?>

@@ -1,5 +1,6 @@
 <?php
 include('contactForm_db.php');
+
 $msg="";
 if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])){
 	$name=$_POST['name'];

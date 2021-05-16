@@ -99,39 +99,80 @@
           </ul>
         </div>
         
+        <?php
+        require_once("validator/ContactValidator.php");
+
+if(isset($_POST['submit']))
+{
+    $validatorObj = new ContactValidator();
+
+    $errors = $validatorObj -> getErrors();
+
+    if(count($errors) == 0)
+    {
+        require_once("contactForm_db.php");
+
+        $conn = Database::getConnection();
+
+        $sql = "INSERT INTO contactform_db (name, lname, email, phone, message)
+        VALUES ('".$_POST["name"]."', '".$_POST["lname"]."', '".$_POST["email"]."', '".$_POST["phone"]."', '".$_POST["message"]."')";
+
+        $conn->query($sql);
+    }
+}
+
+function showError($field, $text)
+{
+    if(isset($GLOBALS["errors"]) && isset($GLOBALS["errors"][$field]))
+    {
+        $errors = $GLOBALS["errors"];
+        echo $errors[$field] . '" style= "border: 1px solid red; ';
+    }
+    else
+    {
+        $temp = "";
+
+        if(isset($_POST[$field]))
+        {
+            $temp = $_POST[$field];
+        }
+        echo $text . '" value="'.$temp.'"';
+    }
+}?>
 
         <!-- CONTACT FORM -->
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
           <h4 class="sent-notification"></h4>
-          <form method="post" id="contact-form" >
+          <form method="post" id="contact-form" autocomplete="on" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" >
             <p>
               <label for ="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Enter name" required />
+              <input class="name" type="text" name="name" id="name" placeholder="<?php showError('name', "First Name") ?>" required />
             </p>
 
             <p>
               <label for="lastname">Last Name</label>
-              <input type="text" name="lname" id="lname" placeholder="Enter lastname" required />
+              <input class="name" type="text" name="lname" id="lname" placeholder="<?php showError('lname', "Last Name") ?>" required  />
             </p>
 
             <p>
               <label for="email">E-mail Address</label>
-              <input type="email" name="email" id="email" placeholder="Enter email" required />
+              <input class="" type="email" name="email" id="email" placeholder="<?php showError('email', "Email") ?>" required/>
             </p>
 
             <p>
               <label for="phone">Phone Number</label>
-              <input type="text" name="phone" id="phone" placeholder="Enter phone number" required />
+              <input type="text" name="phone" id="phone" placeholder="<?php showError('phone', "Phone Number")?>" required />
             </p>
 
             <p class="full">
               <label for ="message">Message</label>
-              <textarea name="message" rows="6" id="message"></textarea>
+              <textarea class=""name="message" rows="6" id="message" required placeholder="<?php showError('message', "Comments/Questions") ?>" ></textarea>
             </p>
 
             <p class="full">
               <button type="submit" name="submit" id="submit" >Submit</button>
+              <span style="color:red;" id="msg"></span>
             </p>
           </form>
           <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -158,7 +199,7 @@
 				jQuery('#submit').html('Submit');
 				jQuery('#submit').attr('disabled',false);
 				jQuery('#contact-form')[0].reset();
-        jQuery('#contact-form').text("Message Sent Successfully.");
+        jQuery('#contact-form').text("Message Sent Successfully! Thank you for contacting us.");
 			}
 		});
 		e.preventDefault();
