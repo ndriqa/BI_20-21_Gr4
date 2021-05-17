@@ -20,7 +20,7 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 	include('PHPMailer/PHPMailerAutoload.php');
   
 	$mail=new PHPMailer(true);
-  
+
   try{
 	$mail->isSMTP();
 	$mail->Host="smtp.gmail.com";
@@ -67,7 +67,7 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 ?>
 
 <style>
-.alert-success{
+/*.alert-success{
   z-index: 1;
   background: #D4EDDA;
   font-size: 18px;
@@ -90,5 +90,5 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
   right: 0;
   top: 10px;
   border-left: 8px solid #FFA502;
-  border-radius: 4px;
+  border-radius: 4px;*/
   </style>
