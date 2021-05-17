@@ -34,6 +34,7 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 	$mail->IsHTML(true);
 	$mail->Subject="New Contact Us";
 	$mail->Body=$html;
+  //$mail->addAttachment('xampp/htdocs/BI_20-21_Gr4/Images/Freshness.png');
 	$mail->SMTPOptions=array('ssl'=>array(
 		'verify_peer'=>false,
 		'verify_peer_name'=>false,
