@@ -157,10 +157,10 @@
               <label for="phone">Phone Number</label>
               <input type="text" name="phone" id="phone" placeholder="<?php showError('phone', "Phone Number")?>" required />
             </p>
-
+            
             <p class="full">
               <label for ="message">Message</label>
-              <textarea class=""name="message" rows="6" id="message" required placeholder="<?php showError('message', "Comments/Questions") ?>" ></textarea>
+              <textarea class="" name="message"  rows="6" id="message" required placeholder="<?php showError('message', "Comments/Questions") ?>" ></textarea>
             </p>
             <form action="php/uploadFile.php" enctype="multipart/form-data" method="post" style="margin:20px 430px ;" required>
 <label>Upload a file with your preferences:</label>
@@ -193,6 +193,8 @@
               <span style="color:red;" id="msg"></span>
             </p>
           </form></form>
+
+
           <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
           <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script>
@@ -263,6 +265,7 @@
         <img src="./Images/contact/feedback/dragdrop.gif" alt="">
       </div>
       <div class="text-area">
+      <form action="openFile.php" method="post">
         <div class="text-field">
           <label for="feedback-text">Feedback:</label>
           <textarea name="feedback-text" id="feedback-text" cols="30" rows="8"></textarea>
@@ -270,8 +273,9 @@
         <div class="submit-field">
           <label for="the-name">Name: </label>
           <input type="text" name="the-name" id="the-name">
-          <button id="submit-feedback">Submit</button>
+          <button type="submit"id="submit-feedback">Submit</button>
         </div>
+        </form>
 
       </div>
     </div>
@@ -395,3 +399,4 @@ to last throughout the day
 </body>
 
 </html>
+
