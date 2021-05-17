@@ -176,86 +176,86 @@
                     <output name="x" for="a b"></output>
 					 <?php include 'error.php';?>  
                 </form>
-
         </div>
 
         <script type="text/javascript">
+
         function max() {
 
-var a = Math.max(203, 350, 702, 850, 1100);
-alert(Number.MAX_VALUE + " The maximum number is " + a + ". ");
+      var a = Math.max(203, 350, 702, 850, 1100);
+      alert(Number.MAX_VALUE + " The maximum number is " + a + ". ");
 
-}
+          }
 
-function min() {
+          function min() {
 
-var a = Math.min(203, 350, 702, 850, 1100);
-alert(" The minimum number is " + a + ". ");
+          var a = Math.min(203, 350, 702, 850, 1100);
+          alert(" The minimum number is " + a + ". ");
 
-}
+          }
 
-function sqrt() {
+          function sqrt() {
 
-var num = 1100;
-alert(Math.sqrt(num));
-}
+          var num = 1100;
+          alert(Math.sqrt(num));
+          }
 
-function nan() {
-x = document.getElementById("num").value;
-var res = "";
-if (isNaN(x) == true);
-alert(isNaN);
-}
-
-
-function eksponent() {
-var num = 350;
-var n = num.toExponential();
-alert(n);
-}
+          function nan() {
+          x = document.getElementById("num").value;
+          var res = "";
+          if (isNaN(x) == true);
+          alert(isNaN);
+          }
 
 
-function floor() {
-document.getElementById("num").innerHTML = Math.floor(3876985.548);
-}
+          function eksponent() {
+          var num = 350;
+          var n = num.toExponential();
+          alert(n);
+          }
 
 
-function ceil() {
-document.getElementById("num").innerHTML = Math.ceil(3876985.548);
-}
+          function floor() {
+          document.getElementById("num").innerHTML = Math.floor(3876985.548);
+          }
 
 
-function string() {
-num = document.getElementById("uri_text").value;
-var y = num.toString();
-}
+          function ceil() {
+          document.getElementById("num").innerHTML = Math.ceil(3876985.548);
+          }
 
 
-function func_match() {
-var str = "";
-str += document.getElementById("thirdyear").value;
-var res = str.match(/e/g);
-alert(res);
-}
+          function string() {
+          num = document.getElementById("uri_text").value;
+          var y = num.toString();
+          }
 
 
-function func_replace() {
-var str = "";
-str += document.getElementById("fourthyear").innerHTML;
-var repl = "";
-repl += document.getElementById("replace").value;
-var res = str.replace(str, repl);
-document.getElementById("fourthyear").innerHTML = res;
-}
-function globalconst() {
-                    //my test.asp?name=ståle&car=saab
-                    //var uri = "";
-                    uri = document.getElementById("uri_text").value;
-                    var enc = encodeURI(uri);
-                    var dec = decodeURI(enc);
-                    var res = "Encoded URI: " + enc + "<br>" + "Decoded URI: " + dec;
-                    document.getElementById("uri_result").innerHTML = res;
-                }
+          function func_match() {
+          var str = "";
+          str += document.getElementById("thirdyear").value;
+          var res = str.match(/e/g);
+          alert(res);
+          }
+
+
+          function func_replace() {
+          var str = "";
+          str += document.getElementById("fourthyear").innerHTML;
+          var repl = "";
+          repl += document.getElementById("replace").value;
+          var res = str.replace(str, repl);
+          document.getElementById("fourthyear").innerHTML = res;
+          }
+          function globalconst() {
+                              //my test.asp?name=ståle&car=saab
+                              //var uri = "";
+                              uri = document.getElementById("uri_text").value;
+                              var enc = encodeURI(uri);
+                              var dec = decodeURI(enc);
+                              var res = "Encoded URI: " + enc + "<br>" + "Decoded URI: " + dec;
+                              document.getElementById("uri_result").innerHTML = res;
+                          }
         </script>
     </div>
   </main>
