@@ -145,15 +145,16 @@
 					style="width: 100%; height: 400px">
 				<div class="menu-image-text">
 
-					<span class="subheading1">Find your favorite food</span>
+					<span class="subheading1"><?php echo substr("Please Find Your favorite food",6);?></span>
 					<h2 class="subheading2" style="margin-bottom: 1.5rem">-Restaurant-</h2>
+					<p class="subheading2" style="margin-bottom: 1rem">Its All about this <?php echo strlen("Food"); ?> letters word: "FOOD"</p>
 				</div>
 			</div>
 
 
 
 			<div class="col-md-7 text-center heading-section ftco-animate fadeInUp ftco-animated">
-				<span class="subheading">Find your favorite food</span>
+				<span class="subheading">Find your Favorite Food</span>
 				<h2 class="mb-4" style="margin-bottom: 1.5rem">scroll down</h2>
 
 			</div>
@@ -192,95 +193,96 @@
 								$pizzaPrices = array("Cheese Pizza"=>15, "Pepperoni"=>19, "Veggie Pizza"=>15, "Margherita Pizza"=>13, "BBQ Chicken Pizza"=>17);
 								$startersPrices = array("Stir Fried Chilli Chicken"=>22, "Chicken Satay"=>13, "Cheese Balls"=>12, "French Fries"=>13, "Microwave Paneer Tikkas"=>14);
 							?>
-						
-								
-							
-								<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
-									<div class="menu-img img"
-										style="background-image: url(./Images/reservation/bolognese.jpg);"></div>
-									<div class="text">
-										<div class="d-flex">
-											<div class="one-half">
-												<h3><?php echo $pasta[0];?></h3>
-											</div>
-											<div class="one-forth">
-												<span class="price">$<?php echo $pastaPrices["Spaghetti Bolognese"];?></span>
-											</div>
-										</div>
-										<p><span>Beef</span>, <span>Red chilli</span>, <span>Tomatoe puree</span></p>
-									</div>
-									<hr>
-								</div>
-								<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
-									<div class="menu-img img"
-										style="background-image: url(./Images/reservation/fourcheese.jpg);"></div>
-									<div class="text">
-										<div class="d-flex">
-											<div class="one-half">
-												<h3><?php echo $pasta[1];?></h3>
-											</div>
-											<div class="one-forth">
-												<span class="price">$<?php echo $pastaPrices["Four Cheese Pasta"];?></span>
-											</div>
-										</div>
-										<p><span>Mozzarella</span>, <span>Gorgonzola</span>, <span>Parmesan</span>,
-											<span>Fresh creaamy cheese</span></p>
-									</div>
-									<hr>
 
-								</div>
-								<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
-									<div class="menu-img img"
-										style="background-image: url(./Images/reservation/pomodorini.jpg);"></div>
-									<div class="text">
-										<div class="d-flex">
-											<div class="one-half">
-												<h3><?php echo $pasta[2];?></h3>
-											</div>
-											<div class="one-forth">
-												<span class="price">$<?php echo $pastaPrices["Pasta Con Pomodoro"];?></span>
-											</div>
+
+
+							<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
+								<div class="menu-img img"
+									style="background-image: url(./Images/reservation/bolognese.jpg);"></div>
+								<div class="text">
+									<div class="d-flex">
+										<div class="one-half">
+											<h3><?php echo $pasta[0];?></h3>
 										</div>
-										<p><span>Tomatoes</span>, <span>Basil</span>, <span>Peppers</span>,
-											<span>Garlic</span></p>
-									</div>
-									<hr>
-								</div>
-								<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
-									<div class="menu-img img"
-										style="background-image: url(./Images/reservation/lasagna.jpg);"></div>
-									<div class="text">
-										<div class="d-flex">
-											<div class="one-half">
-												<h3><?php echo $pasta[3];?></h3>
-											</div>
-											<div class="one-forth">
-												<span class="price">$<?php echo $pastaPrices["Lasagna"];?></span>
-											</div>
+										<div class="one-forth">
+											<span
+												class="price">$<?php echo $pastaPrices["Spaghetti Bolognese"];?></span>
 										</div>
-										<p><span>Ragù</span>, <span>Basil</span>, <span>Cheese</span>,
-											<span>Seasonings</span></p>
 									</div>
-									<hr>
+									<p><span>Beef</span>, <span>Red chilli</span>, <span>Tomatoe puree</span></p>
 								</div>
-								<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
-									<div class="menu-img img"
-										style="background-image: url(./Images/reservation/arrabiata.jpg);"></div>
-									<div class="text">
-										<div class="d-flex">
-											<div class="one-half">
-												<h3><?php echo $pasta[4];?></h3>
-											</div>
-											<div class="one-forth">
-												<span class="price">$<?php echo $pastaPrices["Pasta Arrabiata"];?></span>
-											</div>
+								<hr>
+							</div>
+							<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
+								<div class="menu-img img"
+									style="background-image: url(./Images/reservation/fourcheese.jpg);"></div>
+								<div class="text">
+									<div class="d-flex">
+										<div class="one-half">
+											<h3><?php echo $pasta[1];?></h3>
 										</div>
-										<p><span>Meat</span>, <span>Tomatoe</span>, <span>Hot sauce</span>,
-											<span>Basil</span></p>
+										<div class="one-forth">
+											<span class="price">$<?php echo $pastaPrices["Four Cheese Pasta"];?></span>
+										</div>
 									</div>
-									<hr>
+									<p><span>Mozzarella</span>, <span>Gorgonzola</span>, <span>Parmesan</span>,
+										<span>Fresh creaamy cheese</span></p>
 								</div>
-							
+								<hr>
+
+							</div>
+							<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
+								<div class="menu-img img"
+									style="background-image: url(./Images/reservation/pomodorini.jpg);"></div>
+								<div class="text">
+									<div class="d-flex">
+										<div class="one-half">
+											<h3><?php echo $pasta[2];?></h3>
+										</div>
+										<div class="one-forth">
+											<span class="price">$<?php echo $pastaPrices["Pasta Con Pomodoro"];?></span>
+										</div>
+									</div>
+									<p><span>Tomatoes</span>, <span>Basil</span>, <span>Peppers</span>,
+										<span>Garlic</span></p>
+								</div>
+								<hr>
+							</div>
+							<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
+								<div class="menu-img img"
+									style="background-image: url(./Images/reservation/lasagna.jpg);"></div>
+								<div class="text">
+									<div class="d-flex">
+										<div class="one-half">
+											<h3><?php echo $pasta[3];?></h3>
+										</div>
+										<div class="one-forth">
+											<span class="price">$<?php echo $pastaPrices["Lasagna"];?></span>
+										</div>
+									</div>
+									<p><span>Ragù</span>, <span>Basil</span>, <span>Cheese</span>,
+										<span>Seasonings</span></p>
+								</div>
+								<hr>
+							</div>
+							<div class="menus border-bottom-0 d-flex ftco-animate fadeInUp ftco-animated">
+								<div class="menu-img img"
+									style="background-image: url(./Images/reservation/arrabiata.jpg);"></div>
+								<div class="text">
+									<div class="d-flex">
+										<div class="one-half">
+											<h3><?php echo $pasta[4];?></h3>
+										</div>
+										<div class="one-forth">
+											<span class="price">$<?php echo $pastaPrices["Pasta Arrabiata"];?></span>
+										</div>
+									</div>
+									<p><span>Meat</span>, <span>Tomatoe</span>, <span>Hot sauce</span>,
+										<span>Basil</span></p>
+								</div>
+								<hr>
+							</div>
+
 						</div>
 						<div class="menu-wrap" style="padding: 60px;">
 							<div class="heading-menu text-center ftco-animate fadeInUp ftco-animated">
@@ -380,7 +382,8 @@
 											<h3><?php echo $starters[0];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$<?php echo $startersPrices["Stir Fried Chilli Chicken"];?></span>
+											<span
+												class="price">$<?php echo $startersPrices["Stir Fried Chilli Chicken"];?></span>
 										</div>
 									</div>
 									<p><span>Chicken</span>, <span>Chilli sauce</span>, <span>Tomatoe puree</span>, </p>
@@ -446,7 +449,8 @@
 											<h3><?php echo $starters[4];?></h3>
 										</div>
 										<div class="one-forth">
-											<span class="price">$<?php echo $startersPrices["Microwave Paneer Tikkas"];?></span>
+											<span
+												class="price">$<?php echo $startersPrices["Microwave Paneer Tikkas"];?></span>
 										</div>
 									</div>
 									<p><span>Paneer cubes</span>, <span>chaat masala</span>, <span>Chilli powder</span>
