@@ -224,6 +224,14 @@
 		});
 		e.preventDefault();
 	  });
+
+    <?php 
+    if (empty($_POST["phone"])&&(is_numeric($_POST["phone"]))) {
+    $error .="Phone is required<br/>";
+  } else {                  
+               $phone = $_POST["phone"];
+            }
+            ?>
 	  </script>
 
           <!-- End #contact-form -->
