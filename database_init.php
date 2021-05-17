@@ -38,7 +38,7 @@ $sql = "CREATE TABLE `orders` (
     `drink` varchar(30) NOT NULL,
     `price` decimal(5,2) NOT NULL,
     `payment_method` varchar(20) NOT NULL
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    PRIMARY KEY (id)) ENGINE = InnoDB DEFAULT CHARSET=utf8;
     ";
 if (mysqli_query($db, $sql)) {
     echo 'Table created';
@@ -47,17 +47,14 @@ if (mysqli_query($db, $sql)) {
 }
 
 //create table contact_us
-$sql = "CREATE TABLE `orders` (
+$sql = "CREATE TABLE `contact_us` (
     `id` int(11) NOT NULL,
-    `first_name` varchar(20) NOT NULL,
-    `last_name` varchar(20) NOT NULL,
-    `number` varchar(20) NOT NULL,
-    `address` varchar(100) NOT NULL,
-    `food` varchar(30) NOT NULL,
-    `drink` varchar(30) NOT NULL,
-    `price` decimal(5,2) NOT NULL,
-    `payment_method` varchar(20) NOT NULL
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `name` varchar(20) NOT NULL,
+    `lname` varchar(20) NOT NULL,
+    `email` varchar(20) NOT NULL,
+    `mobile` varchar(10) NOT NULL,
+    `message` varchar(200) NOT NULL,
+    PRIMARY KEY (id)) ENGINE = InnoDB DEFAULT CHARSET=utf8;
     ";
 if (mysqli_query($db, $sql)) {
     echo 'Table created';
