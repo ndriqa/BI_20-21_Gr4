@@ -161,9 +161,13 @@
 
 			<div class="fixed-bg"></div>
 			<div class="col-md-7 text-center heading-section ftco-animate fadeInUp ftco-animated">
+				<?php
+				$foodTypes = array("Pasta", "Pizza","Starters");
+				$comma_separated_food = implode(", ", $foodTypes);
+				?>
 				<span class="subheading">Specialties</span>
 				<h2 class="mb-4" style="margin-bottom: 1.5rem">Our Menu</h2>
-				<h2 class="mb-4">Pasta, Pizza and Starters</h2>
+				<h2 class="mb-4"><?php echo $comma_separated_food;?></h2>
 			</div>
 
 			<div class="reservation-form">
@@ -177,6 +181,7 @@
 								<h3 style="color:darkgray">Pasta</h3>
 							</div>
 							<?php
+								
 								// Defining variables
 								$pasta = array("Spaghetti Bolognese", "Four Cheese Pasta", "Pasta Con Pomodoro","Lasagna", "Pasta Arrabiata");
 								$pizza = array("Cheese Pizza", "Pepperoni", "Veggie Pizza","Margherita Pizza", "BBQ Chicken Pizza");
