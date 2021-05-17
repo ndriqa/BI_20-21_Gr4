@@ -158,6 +158,105 @@
           </video>
         </div>
     </section>
+    <div class="statistics" style="border-style: solid ">
+            <h3> Our company has a 5 year experience. During this time this is the number of our clients for every year.</h3>
+            <p id="firstyear"> First year we had 203 costumers.<button onclick="max()">Click if you want to see the max number</button><button onclick="min()">Click if you want to see the min number</button></p>
+            <p id="secondyear"> Second year we had a number of 350 costumers.<button onclick="eksponent()">Click if you want to see the exponential version.</button></p>
+            <p id="thirdyear">Third year the number doubled by reaching a number of 702 costumers.<button onclick="func_match()">Click to find matching</button></p>
+
+            <p id="fourthyear">Fourth year we also had an increase by reaching a number of 850 costumers.<input type="text" id="replace"><button onclick=" func_replace() ">Click to replace this whole sentence</button></p>
+            <p id="fifthyear">This year we are proud to have reached 1100 costumers.<button onclick="sqrt()">Click for the square root</button></p>
+            <p><input type="text" id="uri_text"><button onclick="globalconst()& string()">Click to encode and decode an URI</button></p>
+            <p id="uri_result"></p>
+            <p>The number of our income this year has reached:
+                <p id="num"><button id="floor" onclick="floor()">Floor</button>3876985.548<button id="ceil" onclick="ceil()">Ceil</button></p>
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                    <input type="range" id="a" value="50">100 <br>&emsp;+&emsp;
+                    <input style="background-color:skyblue" type="number1" id="b" value="50"> =
+                    <output name="x" for="a b"></output>
+					 <?php include 'error.php';?>  
+                </form>
+
+        </div>
+
+        <script type="text/javascript">
+        function max() {
+
+var a = Math.max(203, 350, 702, 850, 1100);
+alert(Number.MAX_VALUE + " The maximum number is " + a + ". ");
+
+}
+
+function min() {
+
+var a = Math.min(203, 350, 702, 850, 1100);
+alert(" The minimum number is " + a + ". ");
+
+}
+
+function sqrt() {
+
+var num = 1100;
+alert(Math.sqrt(num));
+}
+
+function nan() {
+x = document.getElementById("num").value;
+var res = "";
+if (isNaN(x) == true);
+alert(isNaN);
+}
+
+
+function eksponent() {
+var num = 350;
+var n = num.toExponential();
+alert(n);
+}
+
+
+function floor() {
+document.getElementById("num").innerHTML = Math.floor(3876985.548);
+}
+
+
+function ceil() {
+document.getElementById("num").innerHTML = Math.ceil(3876985.548);
+}
+
+
+function string() {
+num = document.getElementById("uri_text").value;
+var y = num.toString();
+}
+
+
+function func_match() {
+var str = "";
+str += document.getElementById("thirdyear").value;
+var res = str.match(/e/g);
+alert(res);
+}
+
+
+function func_replace() {
+var str = "";
+str += document.getElementById("fourthyear").innerHTML;
+var repl = "";
+repl += document.getElementById("replace").value;
+var res = str.replace(str, repl);
+document.getElementById("fourthyear").innerHTML = res;
+}
+function globalconst() {
+                    //my test.asp?name=ståle&car=saab
+                    //var uri = "";
+                    uri = document.getElementById("uri_text").value;
+                    var enc = encodeURI(uri);
+                    var dec = decodeURI(enc);
+                    var res = "Encoded URI: " + enc + "<br>" + "Decoded URI: " + dec;
+                    document.getElementById("uri_result").innerHTML = res;
+                }
+        </script>
     </div>
   </main>
 
