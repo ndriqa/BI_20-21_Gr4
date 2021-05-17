@@ -11,6 +11,7 @@
 </head>
 
 <body class="nm-bg">
+<?php session_start();?>
   <!--HEADER STUFF-->
   <header>
     <div class="social-top nm-bg">
@@ -128,13 +129,13 @@
         <div id="user_info">
           <div id="user_name">
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" required>
+            <input type="text" id="fname" name="fname" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
             <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" required>
+            <input type="text" id="lname" name="lname" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
             <label for="num">Number:</label>
-            <input type="text" id="num" name="num" required>
+            <input type="text" id="num" name="num" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br>
+            <input type="text" id="address" name="address" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>><br>
 
           </div>
           <div id="user_submit">
@@ -147,7 +148,6 @@
             <label for="card">Credit Card</label>
             <input type="radio" id="other" name="payment" value="other">
             <label for="other">Other</label> <br>
-
             <input type="hidden" name="form1_submitted" value="1" />
             <input id="cash_out" onclick="cashout()" type="submit"></input>
           </div>
