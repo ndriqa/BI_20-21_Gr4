@@ -2,7 +2,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Your Ticket</title>
-		<link rel="stylesheet" href="style/reservationFormStyle.css">		
+		<link rel="stylesheet" href="style/reservationFormStyle.css">
+		<style>
+			.butoni {
+				display: inline-block;
+				background-color: #3BAFBE;
+				border-radius: 10px;
+				border: 4px double #cccccc;
+				color: #eeeeee;
+				text-align: center;
+				font-size: 15px;
+				padding: 10px;
+				width: 100px;
+				-webkit-transition: all 0.5s;
+				-moz-transition: all 0.5s;
+				-o-transition: all 0.5s;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 5px;
+			}
+    	</style>		
 	</head>
 	<body>
     <?php if (isset($_POST['form_submitted'])): ?>
@@ -77,7 +96,7 @@
 		</aside>
         <br>
         <br> 
-         <a href="reservations.php">return back</a>
+         <a class="butoni" href="reservations.php">return back</a>
 		 <br>
 		 
 		<?php
@@ -97,14 +116,23 @@
         $sql = "INSERT INTO reservations (firstname, lastname, phone, email, date, time, attendees, comment) VALUES ('$firstname', '$lastname', '$num', '$email', '$date', '$time', '$attendees', '$comment')";
 
         if (mysqli_query($db, $sql)) {
-            echo "New record created successfully";
+            echo "";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }
         mysqli_close($db);
 
         ?>
-        <?php endif; ?> 
+        <?php endif; ?>
+		
+		
+		<button class="butoni" onclick ="myfun()">Print Ticket</button>
+		<script type= "text/javascript">
+			function myfun(){
+			window.print();
+			}
+		</script>
+		
 
 	</body>
-</html>
+</html>	
