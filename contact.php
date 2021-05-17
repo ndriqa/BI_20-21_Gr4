@@ -177,23 +177,22 @@
     width: 70px;
     height: 35px;
    " /> -->
-   <input type="submit" name="submit" style="background-color: #E2494C;
-    border: none;
+  
+   
+
+            <p class="full">
+              <button type="submit" name="submit" id="submit"  style="border: none;
     border-radius: 7px;
-    color: #E7FFFD;
-    font-size: 0.7em;
+    color: #E7FFFD; 
+    font-size:15px;
+    border-radius: 7px;
     text-decoration: none;
     cursor: pointer;
     width: 100px;
-    height: 35px;
-   " />
-   </form>
-
-            <p class="full">
-              <button type="submit" name="submit" id="submit" >Submit</button>
+    height: 55px;">Submit</button>
               <span style="color:red;" id="msg"></span>
             </p>
-          </form>
+          </form></form>
           <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
           <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script>
