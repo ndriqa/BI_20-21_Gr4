@@ -179,7 +179,7 @@
 
 						<div class="menu-wrap" style="padding: 60px;">
 							<div class="heading-menu text-center ftco-animate fadeInUp ftco-animated">
-								<h3 style="color:darkgray">Pasta</h3>
+								<h3 style="color:black"><?php echo $foodTypes[0];?></h3>
 							</div>
 							<?php
 								
@@ -286,7 +286,7 @@
 						</div>
 						<div class="menu-wrap" style="padding: 60px;">
 							<div class="heading-menu text-center ftco-animate fadeInUp ftco-animated">
-								<h3>Pizza</h3>
+								<h3><?php echo $foodTypes[1];?></h3>
 							</div>
 							<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
 								<div class="menu-img img"
@@ -371,7 +371,7 @@
 						</div>
 						<div class="menu-wrap" style="padding: 60px;">
 							<div class="heading-menu text-center ftco-animate fadeInUp ftco-animated">
-								<h3>Starters</h3>
+								<h3><?php echo $foodTypes[2];?></h3>
 							</div>
 							<div class="menus d-flex ftco-animate fadeInUp ftco-animated">
 								<div class="menu-img img"
