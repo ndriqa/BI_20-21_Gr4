@@ -1,5 +1,12 @@
 <?php
-       $db = mysqli_connect("localhost", "root", "", "freshness_db");
+    $dbhost = "localhost";
+    $dbuser = "root";
+    $dbpass = '';
+    $dbname = 'freshness_db'; 
+    //$conn = new mysqli($dbhost, $dbuser, $dbpass);
+
+    
+       $db = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
        if (!$db) {
            die("Connection failed: " . mysqli_connect_error());
        }
@@ -17,6 +24,6 @@
            echo "Error: " . $sql . "<br>" . mysqli_error($db);
        }
        mysqli_close($db);
-       
 
+       
         ?>
