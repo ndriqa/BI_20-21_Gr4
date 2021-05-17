@@ -7,8 +7,9 @@
 </head>
 
 <body>
-    <?php session_start(); ?>
     <?php if (isset($_POST['form1_submitted'])) : ?>
+        <?php session_start(); ?>
+
         <header>
             <h1>Freshness Restaurant Order</h1>
         </header>
@@ -44,13 +45,13 @@
                     </tr>
                     <tr>
                         <td><?php
-                            $_SESSION['fname'] = $_POST['fname'];
+                            $_SESSION['first_name'] = $_POST['fname'];
                             echo ($_POST['fname']); ?></td>
                         <td><?php
-                            $_SESSION['lname'] = $_POST['lname'];
+                            $_SESSION['last_name'] = $_POST['lname'];
                             echo ($_POST['lname']); ?></td>
                         <td><?php
-                            $_SESSION['num'] = $_POST['num'];
+                            $_SESSION['number'] = $_POST['num'];
                             echo ($_POST['num']); ?></td>
                         <td><?php
                             $_SESSION['address'] = $_POST['address'];

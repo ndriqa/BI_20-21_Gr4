@@ -11,7 +11,7 @@
 </head>
 
 <body class="nm-bg">
-<?php session_start();?>
+<?php session_start(); ?>
   <!--HEADER STUFF-->
   <header>
     <div class="social-top nm-bg">
@@ -129,13 +129,13 @@
         <div id="user_info">
           <div id="user_name">
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
+            <input type="text" id="fname" name="fname" required value="<?php echo (isset($_SESSION['first_name'])) ? $_SESSION['first_name'] : ''; ?>">
             <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
+            <input type="text" id="lname" name="lname" required value="<?php echo (isset($_SESSION['last_name'])) ? $_SESSION['last_name'] : ''; ?>">
             <label for="num">Number:</label>
-            <input type="text" id="num" name="num" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>>
+            <input type="text" id="num" name="num" required value="<?php echo (isset($_SESSION['number'])) ? $_SESSION['number'] : ''; ?>">
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required <?php echo (isset($_SESSION["fname"])) ? $_SESSION["fname"] : ''; ?>><br>
+            <input type="text" id="address" name="address" required value="<?php echo (isset($_SESSION['address'])) ? $_SESSION['address'] : ''; ?>"><br>
 
           </div>
           <div id="user_submit">
