@@ -162,7 +162,7 @@
               <label for ="message">Message</label>
               <textarea class=""name="message" rows="6" id="message" required placeholder="<?php showError('message', "Comments/Questions") ?>" ></textarea>
             </p>
-            <form action="php/uploadFile.php" enctype="multipart/form-data" method="post" style="margin:20px 430px ;">
+            <form action="php/uploadFile.php" enctype="multipart/form-data" method="post" style="margin:20px 430px ;" required>
 <label>Upload a file with your preferences:</label>
 
 
