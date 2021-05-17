@@ -96,7 +96,7 @@
 		</aside>
         <br>
         <br> 
-         <a class="butoni" href="reservations.php">return back</a>
+         <a class="butoni" href="reservations.php">Return back</a>
 		 <br>
 		 
 		<?php
