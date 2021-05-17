@@ -162,6 +162,32 @@
               <label for ="message">Message</label>
               <textarea class=""name="message" rows="6" id="message" required placeholder="<?php showError('message', "Comments/Questions") ?>" ></textarea>
             </p>
+            <form action="php/uploadFile.php" enctype="multipart/form-data" method="post" style="margin:20px 430px ;">
+<label>Upload a file with your preferences:</label>
+
+
+    <input type="file" name="uploadedfile"  />
+    <!-- <input type="submit" value="Edit" name="editFile" style="background-color: #10498f;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+   " /> -->
+   <input type="submit" name="submit" style="background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+   " />
+   </form>
 
             <p class="full">
               <button type="submit" name="submit" id="submit" >Submit</button>
