@@ -15,14 +15,30 @@
 
 <body class="nm-bg">
   <?php
-  session_start();
-
-  if (!isset($_COOKIE["night"])) {
-    $_COOKIE['night'] = "false";
-  } else {
+  if (isset($_POST["theme_submitted"])) {
+    if (!isset($_COOKIE["night"])) {
+      $_COOKIE['night'] = "false";
+    } else {
+      if ($_COOKIE['night'] == "true") {
+        echo ('<script>let bg = document.getElementsByClassName("nm-bg");
+          Array.from(bg).forEach(element => {
+              element.classList.add("dark-bg")
+          });
+          console.log("hello1");
+          </script>');
+        setcookie("night", "false", time() + (86400 * 30), "/");
+      } else {
+        echo ('<script>let bg = document.getElementsByClassName("nm-bg");
+          Array.from(bg).forEach(element => {
+            element.classList.remove("dark-bg")
+          });
+          console.log("hello2");
+          </script>');
+        setcookie("night", "true", time() + (86400 * 30), "/");
+      }
+    }
   }
-
-?>
+  ?>
   <!--HEADER STUFF-->
   <header class="nm-bg">
     <div class="social-top nm-bg">
@@ -36,7 +52,7 @@
         </div>
 
         <div>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <input type="hidden" name="theme_submitted" value="1" />
             <input type="submit" name="theme-switcher" id="theme-switcher" value="Change theme"></input>
           </form>
@@ -282,6 +298,6 @@ to last throughout the day
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
-<script src="./js/nightmode.js"></script>
+<!-- <script src="./js/nightmode.js"></script> -->
 
 </html>
