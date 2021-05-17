@@ -13,6 +13,7 @@
         </header>
         <main>
             <div class="ushqimet">
+                <h3>Meal Info</h3>
                 <table>
                     <tr>
                         <th>Food</th>
@@ -32,6 +33,7 @@
             <br>
             <br>
             <div class="info">
+                <h3>Personal Info</h3>
                 <table>
                     <tr>
                         <th>Firstname</th>
@@ -69,17 +71,27 @@
         $sql = "INSERT INTO orders (first_name, last_name, number, address, food, drink, price, payment_method) VALUES ('$fname', '$lname', '$num', '$address', '$food', '$drink', '$price', '$pay')";
 
         if (mysqli_query($db, $sql)) {
-            echo "New record created successfully";
+            echo '<h5 class="message">New record created successfully</h5>';
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }
         mysqli_close($db);
 
         ?>
-
-        <a href="order.php">return back</a>
+        <br>
 
     <?php endif; ?>
+
+    <div class="buttons">
+        <a class="back" href="order.php">return back</a>
+        <button class="butoni" onclick="myfun()">Print Ticket</button>
+    </div>
+    <script type="text/javascript">
+        function myfun() {
+            window.print();
+        }
+    </script>
+
 </body>
 
 </html>

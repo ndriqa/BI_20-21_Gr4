@@ -8,6 +8,11 @@ body {
     padding: 20px;
 }
 
+header h1 {
+    text-align: center;
+    padding: 20px 10px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -17,10 +22,19 @@ main {
 
 .ushqimet {
     padding: 10px;
+    border: 1px dashed black;
+    border-radius: 10px;
 }
 
 .info {
     padding: 10px;
+    border: 1px dashed black;
+    border-radius: 10px;
+}
+
+.ushqimet h3, .info h3 {
+    width: 100%;
+    text-align: center;
 }
 
 .info table {
@@ -31,4 +45,41 @@ main {
 th, td {
     padding: 10px;
     border: 1px solid black;
+}
+
+button {
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px dotted darkslategray;
+    background-color: wheat;
+    color: darkslategray;
+    transition: all 0.1s ease-in;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkslategray;
+    color: wheat;
+}
+
+.back {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    border: 1px dotted darkslategray;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    text-align: center;
 }
