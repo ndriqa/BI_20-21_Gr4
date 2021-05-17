@@ -401,3 +401,7 @@ a {
 .submit-field button{
   align-self: flex-end;
 }
+.feedback form {
+  display: flex;
+  width: 100%;  
+}

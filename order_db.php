@@ -7,8 +7,8 @@
 </head>
 
 <body>
+    <?php session_start(); ?>
     <?php if (isset($_POST['form1_submitted'])) : ?>
-    <?php session_start();?>
         <header>
             <h1>Freshness Restaurant Order</h1>
         </header>
@@ -26,7 +26,7 @@
                         <td><?php echo ($_POST['food_name']); ?></td>
                         <td><?php echo ($_POST['drink_name']); ?></td>
                         <td><?php echo ($_POST['payment']); ?></td>
-                        <td><?php echo ("$".number_format(str_replace("$", "", $_POST['total_price']), 2)); ?></td>
+                        <td><?php echo ("$" . number_format(str_replace("$", "", $_POST['total_price']), 2)); ?></td>
                     </tr>
                 </table>
             </div>
@@ -43,18 +43,18 @@
                         <th>Address</th>
                     </tr>
                     <tr>
-                        <td><?php 
-                        $_SESSION['fname'] = $_POST['fname'];
-                        echo ($_POST['fname']); ?></td>
-                        <td><?php 
-                        $_SESSION['lname'] = $_POST['lname'];
-                        echo ($_POST['lname']); ?></td>
-                        <td><?php 
-                        $_SESSION['num'] = $_POST['num'];
-                        echo ($_POST['num']); ?></td>
-                        <td><?php 
-                        $_SESSION['address'] = $_POST['address'];
-                        echo ($_POST['address']); ?></td>
+                        <td><?php
+                            $_SESSION['fname'] = $_POST['fname'];
+                            echo ($_POST['fname']); ?></td>
+                        <td><?php
+                            $_SESSION['lname'] = $_POST['lname'];
+                            echo ($_POST['lname']); ?></td>
+                        <td><?php
+                            $_SESSION['num'] = $_POST['num'];
+                            echo ($_POST['num']); ?></td>
+                        <td><?php
+                            $_SESSION['address'] = $_POST['address'];
+                            echo ($_POST['address']); ?></td>
                     </tr>
                 </table>
             </div>
