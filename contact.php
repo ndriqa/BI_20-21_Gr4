@@ -137,7 +137,7 @@
         <div class="contact">
           <h3 id="emailus">E-mail Us</h3>
           <h4 class="sent-notification"></h4>
-          <form method="post" id="contact-form" autocomplete="on" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" >
+          <form method="post" id="contact-form" autocomplete="on" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>">
             <p>
               <label for ="name">Name</label>
               <input class="name" type="text" name="name" id="name" placeholder="<?php showError('name', "First Name") ?>" required />
