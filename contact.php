@@ -105,8 +105,21 @@
             echo $text . '" value="'.$temp.'"';
         }
     }?>
-
+    <script>
+    function showTime() {
+            var date = new Date();
+            alert("Current time is: " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "\nHave a nice day!");
+        }
+    </script>
+    <div class ="showTime" >
+<input type="button" onclick="showTime();" value="Show time"
+            style="color: #E2494C; font-size: 
+                  18px;text-decoration: underline; 
+                  border-radius: 7px;width: 100px; margin-top: 40px;height: 35px; margin-bottom: 15px;position:absolute;right: 13em;" />
+      </div>
+      
       <div class="wrapper">
+      
         <!-- RESTAURANT INFORMATION -->
         <div class="company-info">
           <h3>Freshness restaurant</h3>
