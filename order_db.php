@@ -26,7 +26,7 @@
                         <td><?php echo ($_POST['food_name']); ?></td>
                         <td><?php echo ($_POST['drink_name']); ?></td>
                         <td><?php echo ($_POST['payment']); ?></td>
-                        <td><?php echo ($_POST['total_price']); ?></td>
+                        <td><?php echo ("$".number_format(str_replace("$", "", $_POST['total_price']), 2)); ?></td>
                     </tr>
                 </table>
             </div>
@@ -75,7 +75,7 @@
         $food = trim($_POST['food_name']);
         $drink = trim($_POST['drink_name']);
         $pay = trim($_POST['payment']);
-        $price = trim(str_replace("$", "", $_POST['total_price']));
+        $price = trim(number_format(str_replace("$", "", $_POST['total_price']), 2));
 
         $sql = "INSERT INTO orders (first_name, last_name, number, address, food, drink, price, payment_method) VALUES ('$fname', '$lname', '$num', '$address', '$food', '$drink', '$price', '$pay')";
 
