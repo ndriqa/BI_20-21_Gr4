@@ -1,5 +1,8 @@
 <?php
 include('contactForm_db.php');
+include ('PHPMailer\PHPMailer');
+include ('PHPMailer\Exception');
+
 $msg="";
 if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])){
 	$name=$_POST['name'];
@@ -11,11 +14,14 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 	//$mysql="insert into contact_us(name,lname,email,phone,message) values('$name','$lname','$email','$phone','$message')";
 	$msg="Thanks message";
   
-	
+
 	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Last Name</td><td>$lname</td></tr><tr><td>E-mail Address</td><td>$email</td></tr><tr><td>Phone Number</td><td>$mobile</td></tr><tr><td>Message</td><td>$message</td></tr></table>";
 	
 	include('PHPMailer/PHPMailerAutoload.php');
+  
 	$mail=new PHPMailer(true);
+  
+  try{
 	$mail->isSMTP();
 	$mail->Host="smtp.gmail.com";
 	$mail->Port=587;
@@ -33,8 +39,16 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
 		'verify_peer_name'=>false,
 		'allow_self_signed'=>false
 	));
-    
-    $alert = '';
+
+  $mail->send();
+    echo 'Message sent!';
+} catch (Exception $e) {
+    echo $e->errorMessage(); //Pretty error messages from PHPMailer
+} catch (\Exception $e) { //The leading slash means the Global PHP Exception class will be caught
+    echo $e->getMessage(); //Boring error messages from anything else!
+}
+}
+    /*$alert = '';
 
     if($mail->send()){
         $alert = '<div class="alert-success">
@@ -46,7 +60,7 @@ if(isset($_POST['name']) && isset($_POST['lname']) && isset($_POST['email']) && 
                     </div>';
                     }
 	
-	echo $msg;}
+	echo $msg;}*/
 
 
 
